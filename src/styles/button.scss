@@ -1,0 +1,19 @@
+.btn{
+    background-color: var(--color-gray3);
+    color: white;
+    border-radius: 8px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    &.sm{
+        width: 106px;
+    }
+    &.full{
+        width: 100%;
+    }
+}
+
+.btn:hover{
+    background-color: var(--color-primary);
+}

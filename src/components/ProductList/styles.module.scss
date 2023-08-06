@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-top: 40px;
+  padding: 20px;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: auto;
+  }
+}

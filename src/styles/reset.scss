@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol,a{
+    list-style: none;
+}
+
+button, a{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+input{
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+}

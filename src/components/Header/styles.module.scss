@@ -1,0 +1,103 @@
+.bg {
+  background-color: var(--color-gray4);
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  & >div {
+    gap: 20px;
+  }
+  @media (max-width: 800px){
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.absolute{
+  position: absolute;
+  right: 350px;
+  bottom: 20px;
+  @media (max-width : 800px){
+    right: 40px;
+    top: 20px;
+  
+  }
+}
+
+.gray{
+    color: var(--color-gray3);
+}
+
+.input{
+    background-color: white;
+    border-radius: 8px;
+    border: 2px white solid;
+    padding: 10px;
+    height: 60px;
+    width: 300px;
+    border: 2px solid var(--color-gray3);
+    @media (max-width: 800px){
+      width: 100%;
+    }  
+}
+
+.full{
+  @media (max-width: 800px){
+    width: 100%;
+  }
+}
+
+.input::placeholder{
+    color: var(--color-gray3);
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+}
+
+.btn{
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    width: 53px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    color: white;
+}
+
+.span{
+    color: white;
+    font-weight: 900;
+    font-size: 0.875rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 7px;
+    background-color: var(--color-primary);
+    position: absolute;
+    right: -10px;
+    top: -15px;
+}
+
+.square{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cart{
+    color: var(--color-gray2);
+    position: relative;
+    font-size: 20px;
+}
