@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { ProductList } from "../../components/ProductList";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { api } from "../../services/api.js";
 
 export const HomePage = () => {
   const localCartList = localStorage.getItem("@CartList");
@@ -15,7 +16,6 @@ export const HomePage = () => {
   const [isVisible, setVisible] = useState(false);
 
   const addToCart = (selectedProduct) => {
-    console.log(selectedProduct);
     if (!cartList.some((selected) => selected.id === selectedProduct.id)) {
       setCartList([...cartList, selectedProduct]);
       toast.success("Produto adicionado com sucesso.", {
@@ -54,11 +54,8 @@ export const HomePage = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch(
-          "https://hamburgueria-kenzie-json-serve.herokuapp.com/products"
-        );
-        const json = await response.json();
-        setProductList(json);
+        const {data} = await api.get("products");
+        setProductList(data);
       } catch (error) {
         toast(error);
       }

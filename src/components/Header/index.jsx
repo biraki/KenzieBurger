@@ -30,7 +30,6 @@ export const Header = ({ setSearch, cartList, setVisible }) => {
               type="text"
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              required
               className={styles.input}
               placeholder="Digite sua pesquisa"
             />
